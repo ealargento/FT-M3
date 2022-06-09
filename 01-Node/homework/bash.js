@@ -19,9 +19,10 @@ process.stdin.on('data', function (data) {
     cmd=raw
   }
 
-  var dale=commands[cmd]//Por qué si coloco solo comands [cmd] no me anda? y debo colocar dale()
+  //var dale=commands[cmd]//Por qué si coloco solo comands [cmd] no me anda? y debo colocar dale()
+  commands[cmd](argus)
   console.log(commands[cmd])
-  dale(argus)
+  //dale(argus)
 
   process.stdout.write('\nprompt > ');
 });
